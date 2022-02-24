@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chuẩn Tiếng Anh</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>   
+    <!-- CSS -->
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body>
+    <div class="container-fluid mobile_ver">
+        <div class="iphone_image_container">
+            <img class="icon1" src="/images/icon1.png" alt="icon 1">
+            <img class="icon2" src="/images/icon2.png" alt="icon 2">
+            <img class="icon3" src="/images/icon3.png" alt="icon 3">
+        </div>
+    </div>
+    <div class="container-fluid desktop_ver">
+        <div class="logo_container">
+            <img src="/images/logo.png" alt="logo" class="logo_img">
+        </div>
+        <div class="introduce_section d-flex">
+            <div class="text-center vertical_center_flex introduce_section_left">
+                <h3 class="text-dark">APP LUYỆN NÓI </h3>
+                <h3 class="text-dark">& GIAO TIẾP TIẾNG ANH THỜI 4.0</h3>
+                <p class="blue_text">Với ELSA Speak - Ai Cũng Có Thể Nói Tiếng Anh Hay!</p>
+                <a class="rounded_button" href="#form_section">Đăng ký ngay</a>
+                <img src="/images/decoration2.png" alt="Decoration 2" class="introduce_section_left_decoration">
+            </div>
+            <div class="introduce_section_right">
+                <img src="/images/Phone 13.png" alt="Phone 13 image">
+                <img src="/images/decoration1.png" alt="Decoration 1" class="introduce_section_right_decoration">
+                <img class="icon1_in_desktop" src="/images/icon1.png" alt="icon 1">
+                <img class="icon2_in_desktop" src="/images/icon2.png" alt="icon 2">
+                <img class="icon3_in_desktop" src="/images/icon3.png" alt="icon 3">
+            </div>
+        </div>
+        <div class="form_section p-3" id="form_section">
+            <div class="rounded form_content">
+                <div class="form_title">
+                    <h6 class="text-white text-center p-3 mb-0">CÙNG ỨNG DỤNG ELSA <br> NÓI TIẾNG ANH “THẢ GA”</h6>
+                </div>
+                <div class="form_body">
+                    <form onsubmit="handleSubmit(event)">
+                        <label for="name" class="d-block blue_label_input">
+                            Họ tên * 
+                            <br>
+                            <input id="name" name="name" type="text" class="resize_input" required>
+                        </label>
+                        <label for="phone_number" class="d-block blue_label_input">
+                            Số điện thoại * 
+                            <br>
+                            <input id="phone_number" name="phone_number" onchange="handleChangePhoneNumber()" type="text" class="resize_input" required>
+                            <div id="phone_error" class="text-danger"></div>
+                        </label>
+                        <label for="email" class="d-block blue_label_input">
+                            Email *
+                            <br>
+                            <input name="email" id="email" onchange="handleChangeEmail()" type="email" class="resize_input" required> 
+                            <div id="email_error" class="text-danger"></div>
+                        </label>
+                        <div class="d-flex justify-content-between">
+                            <label for="duration" class="text-dark mr-1">
+                                <input name="duration" type="checkbox" onclick="onlyOne(this)" value="Gói 1 năm: 989.000 VND">
+                                Gói học 1 năm
+                            </label>
+                            <label for="duration" class="text-dark">
+                                <input name="duration" type="checkbox" onclick="onlyOne(this)" value="Gói trọn đời: 1.995.000 VND">
+                                Gói trọn đời
+                            </label>
+                        </div>
+                        <div class="text-success pb-2" id="check_noti"></div>
+                        <button class="rounded_button resize_button">GỬI ĐĂNG KÝ</button>
+                    </form>
+                </div>
+            </div>
+            <div class="form_section_photo_container">
+                <img src="/images/Phone 15.png" alt="Phone 15 image" class="form_section_photo">
+                <img src="/images/form_decoration1.png" alt="Form decoration 1" class="form_decoration1">
+                <img src="/images/form_decoration2.png" alt="Form decoration 2" class="form_decoration2">
+                <img src="/images/form_decoration3.png" alt="Form decoration 3" class="form_decoration3">
+                <img src="/images/form_decoration4.png" alt="Form decoration 4" class="form_decoration4">
+            </div>
+        </div>
+        <div class="footer">
+            <img src="/images/personalize_your_learning_path.png" alt="Personalize your learning path photo" class="footer_photo">
+        </div>
+    </div>
+    <script>
+        const handleSubmit = (event) => {
+            event.preventDefault()
+            const email_error = document.getElementById("email_error").innerHTML;
+            const phone_error = document.getElementById("phone_error").innerHTML;
+            const check_noti = document.getElementById("check_noti").innerHTML;
+            if(email_error === "" && phone_error === "" && check_noti !== "")
+                alert("Đăng ký thành công");
+            else 
+                alert("Đã có lỗi xảy ra, vui lòng kiểm tra lại.");
+        }
+        const handleChangeEmail = () => {
+            const email = document.getElementById("email").value;
+                if(!validateEmail(email))
+                {
+                    document.getElementById("email_error").innerHTML = "Email format not correct";
+                }
+                else
+                {
+                    document.getElementById("email_error").innerHTML = "";
+                }
+        }
+        const handleChangePhoneNumber = () => {
+            const phone_number = document.getElementById("phone_number").value;
+                if(!phone_number.startsWith("+"))
+                {
+                    document.getElementById("phone_error").innerHTML = "Phone numbers start with +";
+                }
+                else
+                {
+                    document.getElementById("phone_error").innerHTML = "";
+                }
+        }
+        const validateEmail = (email) => {
+            return email.match(
+              /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+            );
+          };
+        function onlyOne(checkbox) {
+            var checkboxes = document.getElementsByName('duration');
+            checkboxes.forEach((item) => {
+                if (item !== checkbox) 
+                    item.checked = false
+                else if(item === checkbox){
+                    if(item.checked)
+                        document.getElementById("check_noti").innerHTML = item.value;
+                    else
+                        document.getElementById("check_noti").innerHTML = "";
+                }     
+
+            })
+        }
+    </script>
+</body>
+</html>

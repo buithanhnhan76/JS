@@ -1,0 +1,179 @@
+html{
+  overflow-x: hidden;
+}
+body{
+  color: #fff;
+}
+.iphone_image_container{
+    width: 50vw;
+    height: 50vh;
+    position: absolute;
+    left: 50%;
+    top: 25%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    background: url(/images/Phone\ 11.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.icon1{
+    position: absolute;
+    top: 30%;
+    left: 70%;
+}
+
+.icon2{
+    position: absolute;
+    top: 60%;
+    left: 10%;
+}
+
+.icon3{
+    position: absolute;
+    top: 30%;
+    left: -10%;
+}
+
+.desktop_ver{
+    display: none;
+}
+
+/* Desktop */
+@media only screen and (min-width: 500px) {
+      .mobile_ver{
+        display: none;
+      }
+      .desktop_ver{
+        display: block;
+      }
+      .logo_img{
+        display: block;
+        margin: 1rem auto;
+      }
+      .logo_container{
+        box-shadow: 0px 5px 2px rgba(12, 36, 64, 0.1);
+        padding-bottom: 0.5rem;
+      }
+      .rounded_button{
+        border-radius: 20px;
+        color: #ffffff;
+        background: linear-gradient(80.25deg, #3DFFC8 1.31%, #40F6CF 15.32%, #49DCE1 38.61%, #57B3FF 68.19%);
+        padding: 5px 15px;
+        border: none;
+        cursor: pointer;
+      }
+      .rounded_button:hover{
+        text-decoration: none;
+        color: #fff;
+      }
+      .blue_text{
+        color: #06BAE8;
+      }
+      .introduce_section{
+        justify-content: space-around;
+        overflow: hidden;
+      }
+      .vertical_center_flex{
+        align-self: center;
+      }
+      .introduce_section_left{
+        position: relative;
+      }
+      .introduce_section_left_decoration{
+        position: absolute;
+        top: 70%;
+        left: -20%;
+        opacity: 0.5;
+      }
+      .introduce_section_right{
+        position: relative;
+      }
+      .introduce_section_right_decoration{
+        position: absolute;
+        bottom: -10%;
+        opacity: 1;
+      }
+      .icon1_in_desktop{
+        position: absolute;
+        top: 30%;
+        left: 0;
+      }
+      .icon2_in_desktop{
+        position: absolute;
+        top: 70%;
+        left: 0%;
+      }
+      .icon3_in_desktop{
+        position: absolute;
+        top: 70%;
+        right: 0%;
+      }
+      .form_section{
+        background: #0C2440;
+        display: flex;
+        justify-content: space-around;
+      }
+      .form_content{
+        align-self: center;
+      }
+      .form_section_photo{
+        width: 40vw;
+        position: relative;
+        z-index: 2;
+      }
+      .form_section_photo_container{
+        position: relative;
+      }
+      .form_decoration1{
+        position: absolute;
+        top: 9%;
+        right: 25%;
+        width: 12%;
+        z-index: 0;
+      }
+      .form_decoration2{
+        position: absolute;
+        left: 30%;
+        bottom: 30%;
+        width: 3%;
+        z-index: 0;
+      }
+      .form_decoration3{
+        position: absolute;
+        left: 35%;
+        bottom: 10%;
+        width: 15%;
+        z-index: 0;
+      }
+      .form_decoration4{
+        position: absolute;
+        right: 7%;
+        top: 50%;
+        width: 11%;
+        z-index: 0;
+      }
+      .form_body{
+        background: #fff;
+        border-radius: 0 0 10px 10px;
+        padding: 0 20px 20px 20px;
+      }
+      .form_title{
+        background: linear-gradient(81.84deg, #49DCE1 1.09%, #39A3FB 96.86%);
+        border-radius: 10px 10px 0 0;
+      }
+      .blue_label_input{
+        color: #06BAE8;
+      }
+      .resize_input{
+        width: 90%;
+      }
+      .resize_button{
+        width: 90%;
+      }
+      .footer_photo{
+        width: 100%;
+      }
+    
+  }
