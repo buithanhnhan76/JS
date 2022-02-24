@@ -11,6 +11,8 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>   
     <!-- CSS -->
     <link rel="stylesheet" href="./styles/style.css">
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/c9801e10cc.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="container-fluid mobile_ver">
@@ -48,17 +50,20 @@
                 <div class="form_body">
                     <form onsubmit="handleSubmit(event)">
                         <label for="name" class="d-block blue_label_input">
+                            <i class="far fa-user"></i>
                             Họ tên * 
                             <br>
                             <input id="name" name="name" type="text" class="resize_input" required>
                         </label>
                         <label for="phone_number" class="d-block blue_label_input">
+                            <i class="fas fa-phone-alt"></i>
                             Số điện thoại * 
                             <br>
                             <input id="phone_number" name="phone_number" onchange="handleChangePhoneNumber()" type="text" class="resize_input" required>
                             <div id="phone_error" class="text-danger"></div>
                         </label>
                         <label for="email" class="d-block blue_label_input">
+                            <i class="far fa-envelope"></i>
                             Email *
                             <br>
                             <input name="email" id="email" onchange="handleChangeEmail()" type="email" class="resize_input" required> 
